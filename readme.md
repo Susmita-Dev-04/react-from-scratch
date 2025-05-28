@@ -31,7 +31,7 @@ Whether you're new to React or brushing up your skills, you'll find useful code 
 - 1> npm create vite@latest
 - 2> ok to proceed? (y) y
 - 3> project name: ProjectName
-- 4> slect framework- React
+- 4> select framework- React
 - 5> select varient: JavaScript
 - 6> for bringing node-module> npm run dev
 
@@ -58,10 +58,10 @@ If you don't have a Vite project set up already, create one using the following 
 npm create vite@latest my-project -- --template react
 cd my-project
 
-### 3. ⚙️ Configure Template Paths
 
-Update the `tailwind.config.js` file to include your template paths:
+#⚙️ Configure Template Paths
 
+**Update the `tailwind.config.js` file to include your template paths:**
   ```js
     /** @type {import('tailwindcss').Config} */
     export default {
@@ -74,3 +74,32 @@ Update the `tailwind.config.js` file to include your template paths:
       },
       plugins: [],
     }
+
+# 🎨 Add Tailwind Directives to CSS
+In your ./src/index.css file, add the Tailwind directives:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+# 🚀 Start Development Server
+Start your local development server using:
+```bash
+npm run dev
+
+# 💡 Start Using Tailwind
+Now, you can start using Tailwind’s utility classes in your components.
+
+Example App.jsx:
+
+```jsx
+export default function App() { 
+  return (
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+  );
+}
+
+
