@@ -70,19 +70,19 @@ export default {
   plugins: [],
 }
 
-## 3.🎨 Add Tailwind Directives to CSS
+### 3.🎨 Add Tailwind Directives to CSS
 In your ./src/index.css file, add the Tailwind directives:
 ```bash
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-## 4.🚀 Start Development Server
+### 4.🚀 Start Development Server
 Start your local development server using:
 ```bash 
 npm run dev
 
-## 5.*💡 Start Using Tailwind
+### 5.*💡 Start Using Tailwind
 Now, you can start using Tailwind’s utility classes in your components.
 Example App.jsx:
 ```bash
@@ -100,10 +100,10 @@ export default function App() {
 
 --- 
 
-## Routing:
+### Routing:
 Routing determines how an application responds to a user request for a specific URL or endpoint.
 
-## Rendering:
+### Rendering:
 Renderng refers to displaying the content of a web page to the user.
 
 **Types of Rendering:**
