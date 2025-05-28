@@ -56,8 +56,8 @@ cd my-project
 
 ### ⚙️ Configure Template Paths
 Update the tailwind.config.js file to include your template paths:
-```bash
-    #Add code snippet here as ss link instead the code written in bash below
+
+## Add code snippet here as ss link instead the code written in bash below
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -94,50 +94,6 @@ export default function App() {
   );
 }
 
-<<<<<<< HEAD
-=======
 
 
 
-
---- 
-
-### Routing:
-Routing determines how an application responds to a user request for a specific URL or endpoint.
-
-### Rendering:
-Renderng refers to displaying the content of a web page to the user.
-
-**Types of Rendering:**
-- Server-Side Rendering (SSR):
-
-The HTML is generated on the server and sent to the client.
-Benefits: Faster initial load time, SEO-friendly.
-Example: Next.js.
-
----
-
-- Client-Side Rendering (CSR):
-
-The browser downloads a JavaScript bundle and renders the content dynamically.
-Benefits: Faster transitions between pages after the initial load.
-Example: React, Angular, Vue.
-
-**Static Site Generation (SSG):**
-
-HTML is pre-rendered at build time.
-Benefits: Extremely fast load times, SEO-friendly.
-Example: Gatsby.js.
-Hybrid Rendering:
-
-Combines SSR and CSR for different pages/routes.
-Example: Next.js.
-
-
-
-
-
-
-
-
->>>>>>> 28585e2c686ed6565ee0659aa9bb209ecbb15faf
