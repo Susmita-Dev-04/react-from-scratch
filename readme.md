@@ -58,48 +58,40 @@ If you don't have a Vite project set up already, create one using the following 
 npm create vite@latest my-project -- --template react
 cd my-project
 
+```
 
-#⚙️ Configure Template Paths
+---
+### 3.⚙️ Configure Template Paths
 
 **Update the `tailwind.config.js` file to include your template paths:**
-  ```js
-    /** @type {import('tailwindcss').Config} */
-    export default {
-      content: [
-        "./index.html",
-        "./src/**/*.{js,ts,jsx,tsx}",
-      ],
-      theme: {
-        extend: {},
-      },
-      plugins: [],
-    }
 
-# 🎨 Add Tailwind Directives to CSS
+```js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+---
+
+### 4.🎨 Add Tailwind Directives to CSS
 In your ./src/index.css file, add the Tailwind directives:
 
 ```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-# 🚀 Start Development Server
+```
+---
+### 5.🚀 Start Development Server
 Start your local development server using:
 ```bash
 npm run dev
-
-# 💡 Start Using Tailwind
-Now, you can start using Tailwind’s utility classes in your components.
-
-Example App.jsx:
-
-```jsx
-export default function App() { 
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  );
-}
-
-
+```
+---
