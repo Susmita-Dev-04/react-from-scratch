@@ -35,7 +35,7 @@ A simple and interactive web app that changes the background color of the screen
 ```
 ---
 ## 📸 Preview
-![UI]()
+![UI](https://github.com/Susmita-Dev-04/react-from-scratch/blob/main/04bgChanger/public/UI.png?raw=true)
 
 ## 🧑‍💻 Getting Started
 1. Clone the repository
