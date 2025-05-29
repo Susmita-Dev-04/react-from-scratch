@@ -95,3 +95,136 @@ Start your local development server using:
 npm run dev
 ```
 ---
+---
+## A.📘 React JSX (JavaScript XML)
+- 🔹 What is JSX?
+JSX is a syntax extension for JavaScript.
+
+It allows you to write HTML-like code inside JavaScript (used in React).
+
+Example:
+
+```jsx
+const element = <h1>Hello, React!</h1>;
+```
+- 🔹 Why use JSX?
+It makes the code more readable and declarative.
+
+Helps visualize the UI structure directly in the component.
+
+- 🔹 JSX Rules:
+One parent element must wrap all JSX.
+
+```jsx
+return (
+  <div>
+    <h1>Title</h1>
+    <p>Paragraph</p>
+  </div>
+);
+```
+Class becomes className:
+```jsx
+<div className="container"></div>
+```
+JavaScript in JSX – use {}:
+```jsx
+const name = "Susmita";
+<h1>Hello, {name}</h1>
+```
+Self-closing tags must end with /:
+```jsx
+<img src="logo.png" alt="logo" />
+```
+- 🔹 JSX is not HTML
+JSX gets compiled to React.createElement() calls behind the scenes.
+---
+## B.📘 React Library – Overview
+🔹 What is React?
+- React is an open-source JavaScript library used for building user interfaces, especially single-page applications (SPAs).
+
+- Developed and maintained by Meta (Facebook).
+
+🔹 Why is React a Library (not a framework)?
+- It focuses only on the "View" layer in the MVC (Model-View-Controller) architecture.
+
+- React doesn’t include built-in routing or state management — you add libraries (like React Router, Redux) as needed.
+
+- It offers flexibility to integrate with other tools.
+
+🔹 Key Features of React Library:
+- Component-Based – UI is broken into reusable pieces.
+
+- Declarative – Describe what you want, not how.
+
+- Virtual DOM – Improves performance by updating only the changed parts.
+
+- Unidirectional Data Flow – Data flows one way (parent → child).
+
+- Hooks (since React 16.8) – Functional way to handle state and lifecycle.
+
+🔹 Core React Library Includes:
+- react – for creating components and managing JSX.
+
+- react-dom – for rendering to the DOM.
+
+- react-scripts – (when using Create React App) for running and building the app.
+
+🔹 Example:
+```bash
+npm install react react-dom
+```
+---
+## C.📘 React Components
+🔹 What is a Component?
+- A component is a reusable piece of UI.
+
+- Think of it like a function that returns JSX.
+
+- React apps are made up of multiple components working together.
+
+🔹 Types of Components:
+- Functional Component ✅ (modern & preferred)
+```jsx
+function Welcome() {
+  return <h1>Hello, React!</h1>;
+}
+```
+- Arrow Function Component
+```jsx
+const Welcome = () => <h1>Hello, React!</h1>;
+```
+- Class Component ❌ (older method)
+```jsx
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, React!</h1>;
+  }
+}
+```
+🔹 Features of Components:
+- Reusable: Use one component in multiple places.
+
+- Composable: One component can contain others.
+
+- Isolated: Each component manages its own logic and state.
+
+🔹 Naming Rule:
+- Component names must start with a capital letter.
+```jsx
+<Header /> ✅
+<header /> ❌ (will be treated as HTML)
+```
+🔹 Rendering a Component:
+- In App.js:
+```jsx
+import Welcome from './Welcome';
+
+function App() {
+  return (
+    <div>
+      <Welcome />
+    </div>
+  );
+}
+```
