@@ -1,13 +1,30 @@
-import { useState } from 'react'
-import './App.css'
+import { use, useState } from "react";
+import { InputBox } from "./components/InputBox";
+import useCurrencyInfo from "./hooks/useCurrencyInfo";
+import "./App.css";
 
 function App() {
+  const [amount, setAmount] = useState(0);
+  const [selectedCurrency, setSelectedCurrency] = useState("usd");
+  const { currencyOptions, convertCurrency } = useCurrencyInfo();
+  const [from, setFrom] = useState("usd");
+  const [to, setTo] = useState("eur");
+  const [convertedAmount, setConvertedAmount] = useState(0);
 
+  const currencyInfo = useCurrencyInfo(from);
+  const options = Object.keys(currencyInfo);
+
+  const swap = () => {
+    setFrom(to);
+    setTo(from);
+    setConvertedAmount(amount);
+    setAmount(convertedAmount);
+  };
   return (
     <>
-      <h1 className='text-3xl bg-orange-500 border-radius'>Currency App</h1>
+      <h1 className="text-3xl bg-orange-500 border-radius">Currency App</h1>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
