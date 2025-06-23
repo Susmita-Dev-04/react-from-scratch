@@ -1,17 +1,17 @@
 //custom hook to fetch currency information
+import {useEffect, useState} from "react"
 
-import { useEffect, useState } from "react";
 
 function useCurrencyInfo(currency){
-    comst [data, setData] = useState({});
-    useEffect(()=>{
+    const [data, setData] = useState({})
+    useEffect(() => {
         fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)
-        .then((response) => response.json())
-        .then((response) => setData(response[currency]))
+        .then((res) => res.json())
+        .then((res) => setData(res[currency]))
         console.log(data);
-    },[currency])
+    }, [currency])
     console.log(data);
-    return data;    
+    return data
 }
 
 export default useCurrencyInfo;
